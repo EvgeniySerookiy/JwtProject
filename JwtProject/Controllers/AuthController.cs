@@ -1,5 +1,6 @@
 using JwtProject.Entities;
-using JwtProject.Models;
+using JwtProject.Models.Token; 
+using JwtProject.Models.User; 
 using JwtProject.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

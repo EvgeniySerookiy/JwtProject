@@ -4,7 +4,9 @@ using System.Security.Cryptography;
 using System.Text;
 using JwtProject.Data;
 using JwtProject.Entities;
-using JwtProject.Models;
+// using JwtProject.Models; // Этот using уже не нужен, если все DTO в подпапках
+using JwtProject.Models.Token;
+using JwtProject.Models.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -37,6 +39,7 @@ public class AuthService : IAuthService
         user.Username = userRegisterDto.Username;
         user.Role = userRegisterDto.Role;
         user.PasswordHash = hashedPassword;
+        user.Email = userRegisterDto.Email; // <<< ВОТ ЭТО ИЗМЕНЕНИЕ!
         
         _userDbContext.Users.Add(user);
         await _userDbContext.SaveChangesAsync(); 

@@ -1,4 +1,4 @@
-namespace JwtProject.Models;
+namespace JwtProject.Models.User;
 
 public record UserLoginDto(
     string Username,

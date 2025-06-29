@@ -1,5 +1,6 @@
 using JwtProject.Entities;
-using JwtProject.Models;
+using JwtProject.Models.Token;
+using JwtProject.Models.User;
 
 namespace JwtProject.Services;
 

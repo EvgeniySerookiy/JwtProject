@@ -1,4 +1,4 @@
-namespace JwtProject.Models;
+namespace JwtProject.Models.Token;
 
 public record RefreshTokenRequestDto(
     Guid UserId,
